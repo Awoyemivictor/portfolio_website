@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="max-width-d">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>JavaScript Closures Simplified</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina Group" />
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Malihu Jquery Custom ScrollBar Css -->
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--  Custom Style Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Color Css  -->
+    <link rel="stylesheet" href="assets/colors/colorfull.css">
+  </head>
+  <body class="blog-single-page max-width-d">
+
+    <!-- Preloader -->
+    <div id="line-loader">
+      <div class="middle-line"></div>
+    </div>
+
+    <!--   Menu Overlay Mobile -->
+    <div class="menu-overlay d-none"></div>
+
+  <!--   Right Side Start  -->
+  <div class="right-side d-none d-lg-block">
+    <div id="date"></div>
+    <div class="social-box">
+      <div class="follow-label">
+        <span>Follow Me</span>
+      </div>
+      <div class="social d-none d-lg-block">
+        <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+          <i class="bi bi-facebook t-purple"></i>
+        </a>
+        <a href="https://twitter.com/awoyemivictora" target="_blank">
+          <i class="bi bi-twitter t-red"></i>
+        </a>
+        <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+          <i class="bi bi-instagram t-green"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+          <i class="bi bi-linkedin t-green"></i>
+        </a>
+      </div>
+    </div>
+    <div class="next-prev-page">
+      <button type="button" class="prev-page bg-base-color hstack">
+        <i class="bi bi-chevron-compact-up mx-auto"></i>
+      </button>
+      <button type="button" class="next-page bg-base-color mt-3 hstack">
+        <i class="bi bi-chevron-compact-down mx-auto"></i>
+      </button>
+    </div>
+  </div>
+  <!--  Right Side End  -->
+
+    <!--  Left Side Start  -->
+    <div class="left-side  nav-close">
+      <div class="menu-content-align">
+        <div class="left-side-image">
+          <img src="./assets/img/awoyemi_victor.png" alt="/">
+        </div>
+        <h1 class="mt-1">Awoyemi Victor</h1>
+        <div class="container d-lg-none d-inline-block">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-muted mb-0">Web & Blockchain Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-align">
+        <ul class="list-group menu text-center " id="menu">
+          <li class="list-group-item">
+            <a href="index.html#hero">
+              <i class="bi bi-house"></i>
+              <span>home</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#about" class="custom-btn">
+              <i class="bi bi-person"></i>
+              <span>about</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#resume">
+              <i class="bi bi-clipboard-check"></i>
+              <span>resume</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#portfolio">
+              <i class="bi bi-collection"></i>
+              <span>works</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#blog">
+              <i class="bi bi-book"></i>
+              <span>blog</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#contact">
+              <i class="bi bi-geo-alt"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a class="download-cv primary-button mt-3 mb-4 d-lg-none" href="https://github.com/awoyemivictor">My Github</a>
+          <div class="social d-lg-none d-block">
+            <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+              <i class="bi bi-facebook t-purple"></i>
+            </a>
+            <a href="https://twitter.com/awoyemivictora" target="_blank">
+              <i class="bi bi-twitter t-red"></i>
+            </a>
+            <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+              <i class="bi bi-instagram t-green"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+              <i class="bi bi-linkedin t-green"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Left Side End  -->
+
+    <!--  Main Start  -->
+    <main id="main" class="main-2">
+
+      <!--  blog Single Start  -->
+      <section id="blog-single" class="blog-single section py-6">
+        <div class="container">  
+          <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h2 class="header-title">JavaScript Closures Simplified</h2>
+                <div class="entry-meta">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-calendar-check"></i>
+                                14 April 2023
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-person-fill"></i>
+                                By Awoyemi Victor
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-4">
+                            <a href="#">
+                                <i class="bi bi-chat-left-text-fill"></i>
+                                24 Comments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="row row-sticky">
+                <div class="col-12 post-content">
+                    <div class="single-post">
+                        <div class="entry-image">
+                            <img src="./assets/img/blog/javascript_closures.webp" alt="/">
+                        </div>
+                        <div class="entry-content">
+                            
+                          <p>I will be using a simple story to explain how closures work in JavaScript and my promise to you is that you’ll understand what closure means and how it works once you’re done reading this article.</p>
+
+                          <p>There is a story of a father who has a child (we’ll make both the father and son functions, but mind you, the son lives inside the father). So we declare the functions like this:
+
+                          <pre>
+                            <code>
+                              function father() { <br>
+                            
+                                function son() {<br>
+    
+                                }<br>
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>Now, the father loved the son so much that he’s ready to provide him anything the son want in order to him. But the father’s lifetime dream was to buy his 
+                            own dream house (we’ll pass this as an argument <strong>house</strong> to the father’s function).</p>
+
+                          <pre>
+                            <code>
+                              function father(house) { <br>
+                            
+                                function son() {<br>
+    
+                                }<br>
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>At age 30yrs, the father was able to acquire a house (let’s say the house is unknown based on the value we’ll pass to the father’s function which will 
+                            take in an empty string value); and then he moved in with his son. As a good father, he gave the son key to have access to the house anytime he wants.</p>
+
+                          <pre>
+                            <code>
+                              function father(house = "") { <br>
+                                const fHouse = house;<br>
+    
+                                function son() {<br>
+                                  return `${fHouse}`<br>
+                                }
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>Fast forward, few years later the son who is now a grown up adult was able to buy his own car (we’ll pass this as an argument too with an empty string
+                             value).
+
+                          <pre>
+                            <code>
+                              function father(house = "") { <br>
+                                const fHouse = house; <br>
+    
+                                function son(car = "") { <br>
+                                  sCar = car; <br>
+                                  
+                                  return `${fHouse} ${sCar}`; <br>
+                                } <br>
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>Although the child can access his father’s house anytime <strong>(this is what we call global variables),</strong> the father can’t access his own son’s car at all 
+                            (<strong>it’s function scoped</strong>) thinking that the son might take advantage of that to disrespect him (<strong>which means you can’t access a function variable outside of 
+                            the function</strong>).</p>
+
+                          <p>Now, at age 60yrs the man did a property will with the name <strong>theAwoyemiWill</strong> which <strong>return</strong> (contains the whole bloodline family properties that includes 
+                            both his own house and the car his son bought so that the son won’t have to do his own will again for the car); and the will also gave only the son 
+                            rightful access to the father’s house and his own car even after the father is gone/dead (this is what is known as <strong><u>Closure</u></strong> — Closures are the ability 
+                            of a child function, or an inner function, to access variables from a higher level scope even after the functions have been called or closed or closed over).</p>
+
+                          <pre>
+                            <code>
+                              function father(house = "") { <br>
+                                const fHouse = house; <br>
+    
+                                return function son(car = "") {<br>
+                                  sCar = car;<br>
+                                  
+                                  return `${fHouse} ${sCar}`;<br>
+                                }<br>
+                              } <br>
+
+                              const theAwoyemiWill = father("bungalow"); <br>
+                              console.log(`The son inherit ${theAwoyemiWill("Mercedes")} at the end.`);<br>
+                            </code>
+                          </pre>
+                          
+                          <img src="./assets/img/blog/closures.webp" alt="">
+                          <br><br>
+                          
+
+                          <p>The name of the will is <strong>theAwoyemiWill (we stored it as variable)</strong> which later contains the father’s property which is the house. 
+                            But even after the father is dead and buried <strong>(the parent scope has been run),</strong> we can still have access to the father’s house <strong>
+                            (which was stored as fHouse variable due to the fact that the son’s function will still be alive and accessible to us).</strong></p>
+
+                          <p>You might think how can we make use of this in our application. One thing you must know is that <strong>anytime a function is run in JavaScript and it returns a 
+                            value, it means the end for the function. </strong>But we can indirectly take advantage of closure and make sure we keep it alive somehow by return a child function inside the parent’s function. With that, even after the parent’s function has ended, the child’s function can still be alive and perform actions in our programme.</p>
+
+                          <p>Let’s say we want to create a sport game recording application for a particular player, whereby we want the player score to automatically get incremented each time a goal is scored by a player. We can declare the score variable within the father’s scope function and increment it within the son’s scope function like this:</p>
+
+                          <pre>
+                            <code>
+                              function game() { <br>
+                                const playerName = "Victor";<br>
+                                let score = 0;<br>
+    
+                                return function win() {<br>
+                                  score++;<br>
+                                  
+                                  return `${playerName} soccer player score is now ${score}`;<br>
+                                }<br>
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>Now, if we loop through 5 times in the game, we’ll notice that the score will keep iterating several times, updating the scores as the player keeps scoring and the program keeps running.</p>
+
+                          <pre>
+                            <code>
+                              function game() { <br>
+                                const playerName = "Victor";<br>
+                                let score = 0;<br>
+
+                                return function win() {<br>
+                                  score++;<br>
+                                  
+                                  return `${playerName} soccer player score is now ${score}`;<br>
+                                }<br>
+                              }<br>
+                          
+                              const playerGame = game(); <br>
+
+                              for(i = 0; i < 5; i++) { <br>
+                                console.log(playerGame()); <br>
+                              }
+                            </code>
+                          </pre>
+                          
+                          <p>The score variable here is what is called Private variables in JavaScript because we have created them separately both within the <strong>game</strong> and <strong>win</strong> functions.</p></5>
+
+                          <p>I hope by now you’ve understand the concepts behind closures in JavaScript. A big thanks to <a href="https://wesbos.com/javascript/03-the-tricky-bits/closures" target="_blank">Wes JavaScript documentation</a> which really simplified things for me. If you’re looking to learn about JavaScript as a beginner, I highly recommend you check out his free book.</p>
+
+                          <p>
+                            If you’ve enjoyed this article, don’t forget to give me a clap and follow me on my social media handles 👇
+                          </p>
+                            <a href="https://web.facebook.com/awoyemiavictor" target="_blank"><strong><u>Facebook</u></strong></a> | 
+                            <a href="https://twitter.com/awoyemivictora" target="_blank"><strong><u>Twitter</u></strong></a> | 
+                            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank"><strong><u>Linkedin</u></strong></a>
+                        </div>
+                    </div>
+                    <!--   Comments Start  -->
+                    <div class="comments mt-5">
+                        <h3>Comments</h3>
+                        <ul class="list-inline comments-list">
+                            <!--  Item 01  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            John Doe
+                                            <p class="text-muted">
+                                                <a href="#">June 24, 2021 at 10:45 am</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li class="list-inline-item">
+                                        <div class="comment-wrap">
+                                            <div class="image-comment">
+                                                <img src="https://via.placeholder.com/125x125" alt="/">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-author">
+                                                    Mary Jane
+                                                    <p class="text-muted">
+                                                        <a href="#">June 25, 2021 at 12:45 am</a>
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.</p>
+                                                <a href="#" class="comment-reply-link">
+                                                    <i class="lni lni-reply"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--  Item 02  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            Jessy Doe
+                                            <p class="text-muted">
+                                                <a href="#">May14, 2021 at 04:55 pm</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Blog Reply-->
+                    <div class="contact-01">
+                        <div class="contact mb-5">
+                            <div class="contact-form">
+                                <h3 class="text-left mb-4">Leave a comment</h3>
+                                <div class="contact-box">
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="name" id="name" type="text" class="form-control" placeholder="First name*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 form-item">
+                                                    <div class="form-group">
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control textarea" placeholder="Your message..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 text-left">
+                                                    <button class="primary-button border-0" id="submit-btn">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    <!--  blog Single End  --> 
+    </main>
+    <!--  Main End  -->
+
+    <!--  Mobile Next and Prev Button Start -->
+    <div class="mobile-blog-nav blog-next-prev-page d-lg-none">
+      <a class="blog-prev-page bg-base-color hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-left mx-auto"></i>
+      </a>
+      <a class="blog-next-page bg-base-color mt-1 mt-lg-3 hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-right mx-auto"></i>
+      </a>
+    </div>
+    <!--  Mobile Next and Prev Button End -->
+
+    <!--  Navbar Button Mobile Start -->
+    <div class="menu-toggle ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--  Navbar Button Mobile End -->
+
+    <!--  Background Shapes Start  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--  Background Shapes End  -->
+
+    <!-- Mouase Magic Cursor Start -->
+    <div class="m-magic-cursor mmc-outer"></div>
+	  <div class="m-magic-cursor mmc-inner"></div>
+    <!-- Mouase Magic Cursor End -->
+
+    <!--  JavaScripts  -->
+    <!--  Jquery 3.4.1  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Malihu ScrollBar Js  -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Swiper Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Map Js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script> -->
+    <!--  Arshia Js  -->
+    <script src="assets/js/arshia.js"></script>
+  </body>
+</html>

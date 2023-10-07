@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="max-width-d">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Scope in JavaScript Explained</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina Group" />
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Malihu Jquery Custom ScrollBar Css -->
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--  Custom Style Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Color Css  -->
+    <link rel="stylesheet" href="assets/colors/colorfull.css">
+  </head>
+  <body class="blog-single-page max-width-d">
+
+    <!-- Preloader -->
+    <div id="line-loader">
+      <div class="middle-line"></div>
+    </div>
+
+    <!--   Menu Overlay Mobile -->
+    <div class="menu-overlay d-none"></div>
+
+  <!--   Right Side Start  -->
+  <div class="right-side d-none d-lg-block">
+    <div id="date"></div>
+    <div class="social-box">
+      <div class="follow-label">
+        <span>Follow Me</span>
+      </div>
+      <div class="social d-none d-lg-block">
+        <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+          <i class="bi bi-facebook t-purple"></i>
+        </a>
+        <a href="https://twitter.com/awoyemivictora" target="_blank">
+          <i class="bi bi-twitter t-red"></i>
+        </a>
+        <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+          <i class="bi bi-instagram t-green"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+          <i class="bi bi-linkedin t-green"></i>
+        </a>
+      </div>
+    </div>
+    <div class="next-prev-page">
+      <button type="button" class="prev-page bg-base-color hstack">
+        <i class="bi bi-chevron-compact-up mx-auto"></i>
+      </button>
+      <button type="button" class="next-page bg-base-color mt-3 hstack">
+        <i class="bi bi-chevron-compact-down mx-auto"></i>
+      </button>
+    </div>
+  </div>
+  <!--  Right Side End  -->
+
+    <!--  Left Side Start  -->
+    <div class="left-side  nav-close">
+      <div class="menu-content-align">
+        <div class="left-side-image">
+          <img src="./assets/img/awoyemi_victor.png" alt="/">
+        </div>
+        <h1 class="mt-1">Awoyemi Victor</h1>
+        <div class="container d-lg-none d-inline-block">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-muted mb-0">Web & Blockchain Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-align">
+        <ul class="list-group menu text-center " id="menu">
+          <li class="list-group-item">
+            <a href="index.html#hero">
+              <i class="bi bi-house"></i>
+              <span>home</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#about" class="custom-btn">
+              <i class="bi bi-person"></i>
+              <span>about</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#resume">
+              <i class="bi bi-clipboard-check"></i>
+              <span>resume</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#portfolio">
+              <i class="bi bi-collection"></i>
+              <span>works</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#blog">
+              <i class="bi bi-book"></i>
+              <span>blog</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#contact">
+              <i class="bi bi-geo-alt"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a class="download-cv primary-button mt-3 mb-4 d-lg-none" href="https://github.com/awoyemivictor">My Github</a>
+          <div class="social d-lg-none d-block">
+            <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+              <i class="bi bi-facebook t-purple"></i>
+            </a>
+            <a href="https://twitter.com/awoyemivictora" target="_blank">
+              <i class="bi bi-twitter t-red"></i>
+            </a>
+            <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+              <i class="bi bi-instagram t-green"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+              <i class="bi bi-linkedin t-green"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Left Side End  -->
+
+    <!--  Main Start  -->
+    <main id="main" class="main-2">
+
+      <!--  blog Single Start  -->
+      <section id="blog-single" class="blog-single section py-6">
+        <div class="container">  
+          <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h2 class="header-title">Scope in JavaScript Explained</h2>
+                <div class="entry-meta">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-calendar-check"></i>
+                                13 April 2023
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-person-fill"></i>
+                                By Awoyemi Victor
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-4">
+                            <a href="#">
+                                <i class="bi bi-chat-left-text-fill"></i>
+                                24 Comments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="row row-sticky">
+                <div class="col-12 post-content">
+                    <div class="single-post">
+                        <div class="entry-image">
+                            <img src="./assets/img/blog/javascript_scope.webp" alt="/">
+                        </div>
+                        <div class="entry-content">
+                            
+                         <p>Scope help us to answer the question: “Where are my variables and functions available me?” In this article, I’ll be explaining in detail what scoping means 
+                          and the different types of scopes in JavaScript.</p> 
+
+                         <p>There are basically 4 types of scopes in JavaScript:</p> 
+
+                         <ol class="about-description-box">
+                          <li>
+                            <p>Global Scopes</p>
+                          </li>
+                          <li>
+                            <p>Function Scopes</p>
+                          </li>
+                          <li>
+                            <p>Block Scopes</p>
+                          </li>
+                          <li>
+                            <p>Lexical & Static Scopes</p>
+                          </li>
+                         </ol>
+                          
+                          
+                         <h4><strong>GLOBAL SCOPES</strong></h4>
+
+                          <p>Anytime we declare a variable, it’ll be available anywhere in your application. For instance:</p> 
+
+                          <pre>
+                            <code>
+                              const myName = "Victor"; <br>
+                            </code>
+                          </pre>
+                          
+                         <p>This type of variable can be called anywhere in your application, script or console and it will definitely work. This is what is referred to as a global 
+                          variable.</p> 
+
+                          <p>To see every single thing attached to the global scope, type the keyword window on your console.</p> 
+
+                          <p>One important thing to take note of is that var variables are attached to the window object and they are globally scoped whereas const and let variables 
+                            when declared as a global scope are not attached to the window. It means that anything that is in the global scope is attached to the window object with 
+                            the exception of const and let variables.</p> <br>
+
+                          <h4><strong>FUNCTION SCOPES</strong></h4>
+
+                          <p>Anytime we create a variable inside a function, those variables are only ever available inside of that function. For instance:</p> 
+
+                          <pre>
+                            <code>
+                              const myAge = 50; <br>
+
+                              function beauty() {<br>
+                                const eyes = "black";<br>
+                              }<br>
+
+                              console.log(myAge);<br>
+                              console.log(eyes);<br>
+                            </code>
+                          </pre>
+                          <img src="./assets/img/blog/function_scopes.webp" alt="">
+                          <br><br>
+                          <p>The curly brackets are like gates. They keep the variables in and don’t allow them to leak out. One important thing to note is that, if a variable is not 
+                            found inside of a function, they will go up a level higher and look for a variable in that scope. If it’s not available in that scope, it will go up a 
+                            level higher. That is why console.log(myAge) print out 50 even though myAge variable is not available in the beauty() function.</p> 
+
+                          <p>At this point, I will like to explain what <strong><u>Shadowed variables</u></strong> means in JavaScript
+
+                          <p class="mt-4">Shadow variables is when you name a global variable and function variable the same thing and the name is called within the function, the global variable gets shadowed (meaning that it has been over-written). For instance:</p> 
+
+                          <pre>
+                            <code>
+                              const myAge = 50; <br>
+
+                              function beauty() {<br>
+                                const myAge = 100;<br>
+    
+                                console.log(myAge);<br>
+                              }<br>
+                              beauty();<br>
+                            </code>
+                          </pre>
+                         
+                          <p>In this example, we first created a global variable myAge with the value of 50. Then we create a function called beauty with a function variable of myAge 
+                            but with a different value of 100. Then we console.log(myAge). After that, we call the function.</p> 
+                            <img src="./assets/img/blog/shadow variables.webp" alt="">
+                            <br><br>
+                          <p>A good measure is to give your global and function variable almost similar but different name so you can have access to both inside the function. 
+                            In this case, the global variable can be named age while the function variable can be named myAge.</p> <br>
+
+                          <h4><strong>BLOCK SCOPES</strong></h4>
+
+                          <p>Anytime we have a set of curly brackets {} in loop statements like if, while, etc, they are referred to as block. Variables declared inside the block 
+                            scopes are only available within the block scopes except for var variables which can leak out of the block scopes. For instance:</p> 
+
+                          <pre>
+                            <code>
+                              for(var i = 0; i < 5; i++) { <br>
+                                console.log(i);<br>
+                              }<br>
+                            </code>
+                          </pre>
+                          <img src="./assets/img/blog/block_scopes.webp" alt="">
+                          <br><br> 
+
+                          <strong>Now, let’s talk about the differences between <strong>const, let and var in JavaScript:</storng></strong><br><br>
+
+                          <h5><strong><u>const variables</u></strong></h5>
+
+                          <ol class="about-description-box">
+                            <li>
+                              <p>We cannot reassign const</p>
+                            </li>
+                            <li>
+                              <p>They must always be equals to a value</p>
+                            </li>
+                          </ol>
+
+                          <h5><strong><u>let variables</u></strong></h5>
+
+                          <ol class="about-description-box">
+                            <li>
+                              <p>We can reassign const</p>
+                            </li>
+                            <li>
+                              <p>We can use it to create a variable name without assigning any value to the variable</p>
+                            </li>
+                            <li>
+                              <p>It’s best used in loop statements like for loop, while loop</p>
+                            </li>
+                            <li>
+                              <p> It’s values don’t leak out outside the block scope it’s declared</p>
+                            </li>
+                          </ol>
+
+                          <h5><strong><u>var variables</u></strong></h5>
+
+                          <ol class="about-description-box">
+                            <li>
+                              <p>We can reassign const</p>
+                            </li>
+                            <li>
+                              <p>They are not block scoped, they are only function scoped</p>
+                            </li>
+                            <li>
+                              <p>They leak out values outside the block scope but not outside function scope</p>
+                            </li>
+                          </ol>
+                          
+                          <br>
+                          <h4><strong>LEXICAL & STATIC SCOPES</strong></h4>
+
+                          <p>These are buzz words used in JavaScript. What it really means is the way variables or scope look-up happens. It happens where funtions gets defined not where 
+                            they are run. For instance:</p> 
+
+                          <pre>
+                            <code>
+                              const myAge = 50; <br>
+
+                              function juga() {<br>
+                                console.log(myAge);<br>
+                              }<br>
+
+                              function freeze() {<br>
+                                const myAge = 100;<br>
+                                juga();<br>
+                              }<br>
+
+                              freeze();
+                            </code>
+                          </pre>
+                          <img src="./assets/img/blog/lexical_static_scopes.webp" alt="">
+                          <br><br>
+
+                          <p>It prints out 50 because even though the juga() was run inside of the freeze function which was having a function variable myAge set to 100, it doesn’t care
+                             about where it was run, all it cares about is where it was defined.</p> 
+
+                          <p>
+                            If you’ve enjoyed this article, don’t forget to give me a clap and follow me on my social media handles 👇
+                          </p>
+                            <a href="https://web.facebook.com/awoyemiavictor" target="_blank"><strong><u>Facebook</u></strong></a> | 
+                            <a href="https://twitter.com/awoyemivictora" target="_blank"><strong><u>Twitter</u></strong></a> | 
+                            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank"><strong><u>Linkedin</u></strong></a>
+                        </div>
+                    </div>
+                    <!--   Comments Start  -->
+                    <div class="comments mt-5">
+                        <h3>Comments</h3>
+                        <ul class="list-inline comments-list">
+                            <!--  Item 01  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            John Doe
+                                            <p class="text-muted">
+                                                <a href="#">June 24, 2021 at 10:45 am</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li class="list-inline-item">
+                                        <div class="comment-wrap">
+                                            <div class="image-comment">
+                                                <img src="https://via.placeholder.com/125x125" alt="/">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-author">
+                                                    Mary Jane
+                                                    <p class="text-muted">
+                                                        <a href="#">June 25, 2021 at 12:45 am</a>
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.</p>
+                                                <a href="#" class="comment-reply-link">
+                                                    <i class="lni lni-reply"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--  Item 02  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            Jessy Doe
+                                            <p class="text-muted">
+                                                <a href="#">May14, 2021 at 04:55 pm</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Blog Reply-->
+                    <div class="contact-01">
+                        <div class="contact mb-5">
+                            <div class="contact-form">
+                                <h3 class="text-left mb-4">Leave a comment</h3>
+                                <div class="contact-box">
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="name" id="name" type="text" class="form-control" placeholder="First name*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 form-item">
+                                                    <div class="form-group">
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control textarea" placeholder="Your message..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 text-left">
+                                                    <button class="primary-button border-0" id="submit-btn">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    <!--  blog Single End  --> 
+    </main>
+    <!--  Main End  -->
+
+    <!--  Mobile Next and Prev Button Start -->
+    <div class="mobile-blog-nav blog-next-prev-page d-lg-none">
+      <a class="blog-prev-page bg-base-color hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-left mx-auto"></i>
+      </a>
+      <a class="blog-next-page bg-base-color mt-1 mt-lg-3 hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-right mx-auto"></i>
+      </a>
+    </div>
+    <!--  Mobile Next and Prev Button End -->
+
+    <!--  Navbar Button Mobile Start -->
+    <div class="menu-toggle ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--  Navbar Button Mobile End -->
+
+    <!--  Background Shapes Start  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--  Background Shapes End  -->
+
+    <!-- Mouase Magic Cursor Start -->
+    <div class="m-magic-cursor mmc-outer"></div>
+	  <div class="m-magic-cursor mmc-inner"></div>
+    <!-- Mouase Magic Cursor End -->
+
+    <!--  JavaScripts  -->
+    <!--  Jquery 3.4.1  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Malihu ScrollBar Js  -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Swiper Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Map Js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script> -->
+    <!--  Arshia Js  -->
+    <script src="assets/js/arshia.js"></script>
+  </body>
+</html>

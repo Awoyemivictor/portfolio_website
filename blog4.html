@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="max-width-d">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>What is HTTP and how does the internet work?</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina Group" />
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Malihu Jquery Custom ScrollBar Css -->
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--  Custom Style Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Color Css  -->
+    <link rel="stylesheet" href="assets/colors/colorfull.css">
+  </head>
+  <body class="blog-single-page max-width-d">
+
+    <!-- Preloader -->
+    <div id="line-loader">
+      <div class="middle-line"></div>
+    </div>
+
+    <!--   Menu Overlay Mobile -->
+    <div class="menu-overlay d-none"></div>
+
+  <!--   Right Side Start  -->
+  <div class="right-side d-none d-lg-block">
+    <div id="date"></div>
+    <div class="social-box">
+      <div class="follow-label">
+        <span>Follow Me</span>
+      </div>
+      <div class="social d-none d-lg-block">
+        <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+          <i class="bi bi-facebook t-purple"></i>
+        </a>
+        <a href="https://twitter.com/awoyemivictora" target="_blank">
+          <i class="bi bi-twitter t-red"></i>
+        </a>
+        <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+          <i class="bi bi-instagram t-green"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+          <i class="bi bi-linkedin t-green"></i>
+        </a>
+      </div>
+    </div>
+    <div class="next-prev-page">
+      <button type="button" class="prev-page bg-base-color hstack">
+        <i class="bi bi-chevron-compact-up mx-auto"></i>
+      </button>
+      <button type="button" class="next-page bg-base-color mt-3 hstack">
+        <i class="bi bi-chevron-compact-down mx-auto"></i>
+      </button>
+    </div>
+  </div>
+  <!--  Right Side End  -->
+
+    <!--  Left Side Start  -->
+    <div class="left-side  nav-close">
+      <div class="menu-content-align">
+        <div class="left-side-image">
+          <img src="./assets/img/awoyemi_victor.png" alt="/">
+        </div>
+        <h1 class="mt-1">Awoyemi Victor</h1>
+        <div class="container d-lg-none d-inline-block">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-muted mb-0">Web & Blockchain Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-align">
+        <ul class="list-group menu text-center " id="menu">
+          <li class="list-group-item">
+            <a href="index.html#hero">
+              <i class="bi bi-house"></i>
+              <span>home</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#about" class="custom-btn">
+              <i class="bi bi-person"></i>
+              <span>about</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#resume">
+              <i class="bi bi-clipboard-check"></i>
+              <span>resume</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#portfolio">
+              <i class="bi bi-collection"></i>
+              <span>works</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#blog">
+              <i class="bi bi-book"></i>
+              <span>blog</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#contact">
+              <i class="bi bi-geo-alt"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a class="download-cv primary-button mt-3 mb-4 d-lg-none" href="https://github.com/awoyemivictor">My Github</a>
+          <div class="social d-lg-none d-block">
+            <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+              <i class="bi bi-facebook t-purple"></i>
+            </a>
+            <a href="https://twitter.com/awoyemivictora" target="_blank">
+              <i class="bi bi-twitter t-red"></i>
+            </a>
+            <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+              <i class="bi bi-instagram t-green"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+              <i class="bi bi-linkedin t-green"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Left Side End  -->
+
+    <!--  Main Start  -->
+    <main id="main" class="main-2">
+
+      <!--  blog Single Start  -->
+      <section id="blog-single" class="blog-single section py-6">
+        <div class="container">  
+          <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h2 class="header-title">What is HTTP and how does the internet work?</h2>
+                <div class="entry-meta">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-calendar-check"></i>
+                                16 March 2023
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-person-fill"></i>
+                                By Awoyemi Victor
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-4">
+                            <a href="#">
+                                <i class="bi bi-chat-left-text-fill"></i>
+                                24 Comments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="row row-sticky">
+                <div class="col-12 post-content">
+                    <div class="single-post">
+                        <div class="entry-image">
+                            <img src="./assets/img/blog/http_internet.webp" alt="/">
+                        </div>
+                        <div class="entry-content">
+                           
+                          <p>With the development of technology, we now live in a world where the internet gives us the freedom to use a variety of applications, including internet 
+                            surfing, email, file transfer, video and audio streaming, and much more. Yet, none of these things are possible without client-server communication using 
+                            specific protocols like <strong>HTTP, SMTP, FTP, POP, and others.</strong></p>
+
+                          <p>One of the most extensively used protocols on the internet is <strong>HTTP, or HyperText Transfer Protocol. </strong>You will know everything there is to know about 
+                             HTTP and how it functions by the time you finish reading this article.</p>
+
+                          <p>The following are some essential HTTP concepts you need to know first:</p>
+
+                          <ul class="about-description-box">
+                            <li>
+                              <p>Since HTTP is an asymmetric request-response client-server protocol, the client sends a request message to the server, which then sends the client the 
+                              response message.</p>
+                            </li>
+                            <li>
+                              <p>Because it is a stateless protocol, the request being processed at the moment is unaware of anything that has occurred in the past.</p>
+                            </li>
+                          </ul>
+                          
+                          <p class="mt-4">Have you ever pondered what occurs when you enter Google.com into your web browser? Well, your web browser converts your requested URL into a request 
+                            message and sends it to the HTTP server. Following that, the HTTP server will evaluate the requested message and return a response or error message back 
+                            to your web browser.
+                          </p>
+                          <p>For instance, the browser will convert the URL www.google.com to something like this:</p>
+
+                          <code>
+                            GET /docs/index.html HTTP/1.1<br>
+                            HOST: www.google.com<br>
+                            Accept: image/gif, image/jpeg, */*<br>
+                            Accept-language: en-us<br>
+                            Accept-Encoding: gzip, deflate<br>
+                            User-Agent: Mozilla/4.0<br>
+                          </code>
+                          <br>
+                          <p>Now, the server has two options when it receives this request message:</p>
+
+                          <ul>
+                            <li>
+                              <p>Analyzes the received request message, converts it into a file in the server’s document directory, and then sends the request file back to the client.</p>
+                            </li>
+                            <li>
+                              <p>Analyzes the received request message, maps it to a server program, runs it, and finally sends the results back to the client.</p>
+                            </li>
+                            <li>
+                              <p>It sends the client an error message if the request cannot be fulfilled.</p>
+                            </li>
+                          </ul>
+
+                          <h4>Protocol for the Network Layer</h4>
+                          <p>There must be a set of established protocols between machines, such as between the client and the server, in order for them to easily communicate with one 
+                            another across the internet. TCP and UDP Protocol are the two sets of protocols in charge of establishing communication between two machines.</p>
+
+
+                          <p><strong>TCP — Transmission Control Protocol </strong>is a type of protocol that is dependable, acknowledgement is required, and each packet includes a sequence number. 
+                            A packet will definitely be sent again if the receiver doesn’t receive it the first time. Unlike UDP, the protocol ensures the delivery of packets. 
+                            When downloading files, browsing the web, and other situations are used.</p>
+
+                          <p><strong>UDP — User Datagram Package </strong>Although it has minimal network overhead, UDP does not ensure packet delivery. It’s widely used in 
+                            applications where reliability is not crucial such as gaming, streaming video and audio, and other similar ones.</p>
+
+                          <p>Often used with TCP/IP connections, HTTP is a client-server application protocol. The IP (Internet Protocol), which comes in IPv4 and IPv6 versions, 
+                            is a network-layer protocol that deals with network addressing and routing. Although the HTTP protocol’s default port number is 80, you are free to 
+                            use alternative user-defined port numbers like <strong>8000 or 8080 instead.</strong></p>
+
+                          <h4>Request and Response Message for HTTP</h4>
+                          <p>Text messages are sent over the internet during HTTP client and server communication. The server receives a request message from the client and 
+                            responds with a response message.</p>
+
+
+                          <h5>- — HTTP REQUEST MESSAGE</h5>
+
+                          <p>The <strong>request line</strong>and <strong>request headers </strong>that make up an HTTP request message are separated by a blank line.</p>
+
+                         <h5>— — Request Line</h5>
+
+                          <p>The syntax for the request line is:</p>
+
+                          <code>request-method-name request-URI HTTP-version</code>
+
+                            <ul class="about-description-box">
+                              <li>
+                                <p>request-method-name: HTTP protocols specify a number of request methods, including GET, POST, HEAD, and OPTIONS. One of these approaches may be 
+                                used by the client to make a request to the server.</p>
+                                <li><p>request-URI: The requested resource is specified by the request-URI.HTTP</p></li>
+                                <li><p>version: Indicates whether the request is for HTTP/1.0 or HTTP/1.1.</p></li>
+                            </ul>
+                            
+                          <strong>Example of request-line are:</strong>
+                          <br>
+                            <code>
+                              GET /test.html HTTP/1.1<br>
+                              HEAD /query.html HTTP/1.0<br>
+                              POST /index.html HTTP/1.1<br>
+                            </code>
+                            <br>
+                          <h5>— — Request Headers</h5>
+
+                          <p>Name:value pairs make up the request headers. Commas are used to separate several values.</p>
+                          <p>The request header has the following syntax:</p>
+
+                          <code>request-header-name: request-header-value1, request-header-value2, …</code>
+                            <br><br>
+                          <strong>Example of request-headers are:</strong>
+                            <br>
+                              <code>
+                                Host: www.google.com<br>
+                                Connection: Keep-Alive<br>
+                                Accept: image/gif, image/jpeg, */*<br>
+                                Accept-Language: us-en, fr, cn<br>
+                            </code>
+                            <br>
+                          <p>The status line and response headers of an HTTP response message are separated by a blank line.</p>
+
+                          <h5>— — Status Line</h5>
+
+                          <p>The status line appears on the first line, and then a response header is optional (s). The status line’s syntax is as follows:</p>
+
+                          <code>HTTP-version status-code reason-phrase</code>
+                          <br><br>
+                          <strong>Example of status line are:</strong>
+                          <br>
+                              <code>
+                                HTTP/1.1 200 OK<br>
+                                HTTP/1.0 404 Not Found<br>
+                                HTTP/1.1 403 Forbidden<br>
+                            </code>
+
+                            <br>
+                          <h5>— — Response Headers</h5>
+
+                          <p>Name:value pairs make up the response headers. Response headers are formatted as follows:</p>
+
+                          <code>response-header-name: response-header-value1, response-header-value2, …</code>
+                          <br><br>
+                          <strong>Example of response headers are:</strong>
+                          <br>
+                              <code>
+                                Content-Type: text/html<br>
+                                Content-Length: 35<br>
+                                Connection: Keep-Alive<br>
+                                Keep-Alive: timeout=15, max=100<br>
+                            </code>
+                            <br><br>
+                          <h4>The HTTP REQUEST METHODS</h4>
+                          <p>The request methods are defined by the HTTP protocol. One of these request methods may be used by a client to communicate a request to an HTTP server. 
+                            The methods are:</p>
+
+                         <p><strong>GET:</strong> A client can make a GET request to the server to obtain a web resource.</p>
+
+                         <p><strong>HEAD:</strong> A client can utilize the HEAD request to acquire the header that would have been obtained through a GET request. As the header includes the data’s 
+                          most recent modification date, it is possible to compare it to the local cache copy.</p>
+
+                         <p><strong>POST:</strong> A method for uploading data to a web server.</p>
+
+                         <p><strong>PUT:</strong> Request that the server save the data.</p>
+
+                         <p><strong>DELETE:</strong> Request that the server remove the data.</p>
+
+                         <p><strong>TRACE:</strong> Request a diagnostic trace of the server’s operations.</p>
+
+                         <p><strong>OPTIONS:</strong> Request a list of the request methods that the server accepts.</p>
+
+                         <p><strong>CONNECT:</strong> This command instructs a proxy to connect to another host and send the requested content without parsing or caching it. To establish an SSL 
+                          connection over a proxy, this is frequently utilized.</p>
+                          <br>
+                          <h5>— The HTTP Request Methods Examples</h5>
+                          <strong>a. “GET” Request Method</strong>
+
+                          <code>GET request-URI HTTP-version</code>
+
+                          <p>E.g</p>
+                          <br>
+                          <code>GET /index.html HTTP/1.0</code>
+                          <br>
+                          <strong>Note:</strong><i>You can test HTTP requests by sending raw request messages to an HTTP server using programs like “telnet” or “hyperterm” or by 
+                          writing your own network application.</i></p>
+
+                          <p>Assuming that the HTTP server is operating on localhost (IP address 127.0.0.1) at port 8000, the following Java program example is shown:</p>
+                            <br>
+                            <code>
+                                import java.net.*;<br>
+                                import java.io.*;<br><br>
+
+                                public class HttpClient {<br>
+                                  public static void main(String[] args) throws IOException {<br>
+                                    // The host and port to be connected.<br>
+                                    String host = "127.0.0.1";<br>
+                                    int port = 8000;<br>
+                                    // Create a TCP socket and connect to the host:port.<br>
+                                    Socket socket = new Socket(host, port);<br>
+                                    // Create the input and output streams for the network socket.<br>
+                                    BufferedReader in<br>
+                                      = new BufferedReader(<br>
+                                          new InputStreamReader(socket.getInputStream()));<br>
+                                    PrintWriter out<br>
+                                      = new PrintWriter(socket.getOutputStream(), true);<br>
+                                    // Send request to the HTTP server.<br>
+                                    out.println("GET /index.html HTTP/1.0");<br>
+                                    out.println();    // blank line separating header & body<br>
+                                    out.flush();<br>
+                                    // Read the response and display on console.<br>
+                                    String line;
+                                    // readLine() returns null if server close the network socket.<br>
+                                    while((line = in.readLine()) != null) {<br>
+                                      System.out.println(line);<br>
+                                    }<br>
+                                    // Close the I/O streams.<br>
+                                    in.close();<br>
+                                    out.close();<br>
+                                  }<br>
+                                }<br>
+                              </code>
+                              <br><br>
+                          <strong>b. “HEAD” Request Method</strong>
+                          <br>
+                           <p>HEAD request is similar to GET request. However, the server returns only the response header without the response body, which contains the actual document. 
+                            HEAD request is useful for checking the headers, such as Last-Modified, Content-Type, Content-Length, before sending a proper GET request to retrieve the 
+                            document.</p>
+
+                          <p>The syntax of the HEAD request is as follows:</p>
+                          <br>
+                            <code>
+                              HEAD request-URI HTTP-version<br>
+
+                              (other optional request headers)<br>
+
+                              (blank line)<br>
+
+                              (optional request body)<br>
+                            </code>
+                            <br><br>
+                          <strong>Example:</strong>
+                          <br>
+                              <code>
+                              HEAD /index.html HTTP/1.0<br>
+                              (blank line)<br>
+                              </code>
+                              <br><br>
+
+                          <strong>c. “OPTIONS” Request Method</strong>
+                          <br>
+                          <p>To find out the request methods the server supports, a client can utilize the OPTIONS request method. The OPTIONS request message syntax is as follows:</p>
+
+                              <code>
+                                OPTIONS request-URI|* HTTP-version<br>
+                                
+                                (other optional headers)<br>
+                                
+                                (blank line)<br>
+                              </code>
+                              <br><br>
+                          <strong>Example:</strong>
+                          <br>
+                              <code>
+                                OPTIONS http://www.amazon.com/ HTTP/1.1<br>
+                                Host: www.amazon.com<br>
+                                Connection: Close<br>
+                                (blank line)<br>
+                              </code><br>
+                              <br>
+                          <strong>d. “TRACE” Request Method</strong>
+                          <br>
+                          <p>To request a diagnostic trace from the server, a client might make a TRACE request. The TRACE request message syntax is as follows:</p>
+
+                              <code>
+                                TRACE / HTTP-version<br>
+                                
+                                (blank line)<br>
+                                
+                              </code>
+                              
+                          <strong>Example:</strong><br>
+                          <br>
+                              <code>
+                                TRACE http://www.amazon.com/ HTTP/1.1<br>
+                                Host: www.amazon.com<br>
+                                Connection: Close<br>
+                                (blank line)<br>
+                              </code><br>
+                              <br>
+                          <strong>e. “POST” Request Method</strong><br>
+
+                          <p>With the post request method, you can “post” extra data to the server, like HTML form submissions or file uploads. A GET request is always made when the 
+                            browser issues an HTTP URL. You can use an HTML form with the attribute method=”post” or create your own network application to start a POST request.</p>
+
+                          <p>The post request takes the following syntax:</p>
+
+                            <code>
+                              POST request-URI HTTP-version<br>
+                              <br>
+                              Content-Type: mime-type<br>
+                              <br>
+                              Content-Length: number-of-bytes<br>
+                              <br>
+                              (other optional request headers)<br>
+                              <br>
+                              (URL-encoded query string)<br>
+                          </code><br>
+
+                          <p><strong>Example 1: Submitting Form Data using POST Request Method</strong></p>
+                        
+                          <img src="./assets/img/blog/code2.png" alt="">
+
+                          <p><strong>Example 2: File Upload using multipart/form-data POST Request</strong></p>
+                        
+                          <img src="./assets/img/blog/code.png" alt="">
+                        <p>
+                          If you’ve enjoyed this article, don’t forget to give me a clap and follow me on my social media handles 👇
+                        </p>
+                          <a href="https://web.facebook.com/awoyemiavictor" target="_blank"><strong><u>Facebook</u></strong></a> | 
+                          <a href="https://twitter.com/awoyemivictora" target="_blank"><strong><u>Twitter</u></strong></a> | 
+                          <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank"><strong><u>Linkedin</u></strong></a> 
+
+                    <!--   Comments Start  -->
+                    <div class="comments mt-5">
+                        <h3>Comments</h3>
+                        <ul class="list-inline comments-list">
+                            <!--  Item 01  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            John Doe
+                                            <p class="text-muted">
+                                                <a href="#">June 24, 2021 at 10:45 am</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li class="list-inline-item">
+                                        <div class="comment-wrap">
+                                            <div class="image-comment">
+                                                <img src="https://via.placeholder.com/125x125" alt="/">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-author">
+                                                    Mary Jane
+                                                    <p class="text-muted">
+                                                        <a href="#">June 25, 2021 at 12:45 am</a>
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.</p>
+                                                <a href="#" class="comment-reply-link">
+                                                    <i class="lni lni-reply"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--  Item 02  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            Jessy Doe
+                                            <p class="text-muted">
+                                                <a href="#">May14, 2021 at 04:55 pm</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Blog Reply-->
+                    <div class="contact-01">
+                        <div class="contact mb-5">
+                            <div class="contact-form">
+                                <h3 class="text-left mb-4">Leave a comment</h3>
+                                <div class="contact-box">
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="name" id="name" type="text" class="form-control" placeholder="First name*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 form-item">
+                                                    <div class="form-group">
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control textarea" placeholder="Your message..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 text-left">
+                                                    <button class="primary-button border-0" id="submit-btn">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    <!--  blog Single End  --> 
+    </main>
+    <!--  Main End  -->
+
+    <!--  Mobile Next and Prev Button Start -->
+    <div class="mobile-blog-nav blog-next-prev-page d-lg-none">
+      <a class="blog-prev-page bg-base-color hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-left mx-auto"></i>
+      </a>
+      <a class="blog-next-page bg-base-color mt-1 mt-lg-3 hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-right mx-auto"></i>
+      </a>
+    </div>
+    <!--  Mobile Next and Prev Button End -->
+
+    <!--  Navbar Button Mobile Start -->
+    <div class="menu-toggle ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--  Navbar Button Mobile End -->
+
+    <!--  Background Shapes Start  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--  Background Shapes End  -->
+
+    <!-- Mouase Magic Cursor Start -->
+    <div class="m-magic-cursor mmc-outer"></div>
+	  <div class="m-magic-cursor mmc-inner"></div>
+    <!-- Mouase Magic Cursor End -->
+
+    <!--  JavaScripts  -->
+    <!--  Jquery 3.4.1  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Malihu ScrollBar Js  -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Swiper Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Map Js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script> -->
+    <!--  Arshia Js  -->
+    <script src="assets/js/arshia.js"></script>
+  </body>
+</html>

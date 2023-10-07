@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="max-width-d">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>How I created and launched the number guessing game with python</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina Group" />
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Malihu Jquery Custom ScrollBar Css -->
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--  Custom Style Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Color Css  -->
+    <link rel="stylesheet" href="assets/colors/colorfull.css">
+  </head>
+  <body class="blog-single-page max-width-d">
+
+    <!-- Preloader -->
+    <div id="line-loader">
+      <div class="middle-line"></div>
+    </div>
+
+    <!--   Menu Overlay Mobile -->
+    <div class="menu-overlay d-none"></div>
+
+  <!--   Right Side Start  -->
+  <div class="right-side d-none d-lg-block">
+    <div id="date"></div>
+    <div class="social-box">
+      <div class="follow-label">
+        <span>Follow Me</span>
+      </div>
+      <div class="social d-none d-lg-block">
+        <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+          <i class="bi bi-facebook t-purple"></i>
+        </a>
+        <a href="https://twitter.com/awoyemivictora" target="_blank">
+          <i class="bi bi-twitter t-red"></i>
+        </a>
+        <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+          <i class="bi bi-instagram t-green"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+          <i class="bi bi-linkedin t-green"></i>
+        </a>
+      </div>
+    </div>
+    <div class="next-prev-page">
+      <button type="button" class="prev-page bg-base-color hstack">
+        <i class="bi bi-chevron-compact-up mx-auto"></i>
+      </button>
+      <button type="button" class="next-page bg-base-color mt-3 hstack">
+        <i class="bi bi-chevron-compact-down mx-auto"></i>
+      </button>
+    </div>
+  </div>
+  <!--  Right Side End  -->
+
+    <!--  Left Side Start  -->
+    <div class="left-side  nav-close">
+      <div class="menu-content-align">
+        <div class="left-side-image">
+          <img src="./assets/img/awoyemi_victor.png" alt="/">
+        </div>
+        <h1 class="mt-1">Awoyemi Victor</h1>
+        <div class="container d-lg-none d-inline-block">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-muted mb-0">Web & Blockchain Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-align">
+        <ul class="list-group menu text-center " id="menu">
+          <li class="list-group-item">
+            <a href="index.html#hero">
+              <i class="bi bi-house"></i>
+              <span>home</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#about" class="custom-btn">
+              <i class="bi bi-person"></i>
+              <span>about</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#resume">
+              <i class="bi bi-clipboard-check"></i>
+              <span>resume</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#portfolio">
+              <i class="bi bi-collection"></i>
+              <span>works</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#blog">
+              <i class="bi bi-book"></i>
+              <span>blog</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#contact">
+              <i class="bi bi-geo-alt"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a class="download-cv primary-button mt-3 mb-4 d-lg-none" href="https://github.com/awoyemivictor">My Github</a>
+          <div class="social d-lg-none d-block">
+            <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+              <i class="bi bi-facebook t-purple"></i>
+            </a>
+            <a href="https://twitter.com/awoyemivictora" target="_blank">
+              <i class="bi bi-twitter t-red"></i>
+            </a>
+            <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+              <i class="bi bi-instagram t-green"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+              <i class="bi bi-linkedin t-green"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Left Side End  -->
+
+    <!--  Main Start  -->
+    <main id="main" class="main-2">
+
+      <!--  blog Single Start  -->
+      <section id="blog-single" class="blog-single section py-6">
+        <div class="container">  
+          <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h2 class="header-title">How I created and launched the number guessing game with python</h2>
+                <div class="entry-meta">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-calendar-check"></i>
+                                04 April 2023
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-person-fill"></i>
+                                By Awoyemi Victor
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-4">
+                            <a href="#">
+                                <i class="bi bi-chat-left-text-fill"></i>
+                                24 Comments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="row row-sticky">
+                <div class="col-12 post-content">
+                    <div class="single-post">
+                        <div class="entry-image">
+                            <img src="./assets/img/blog/mystery_number_game.webp" alt="/">
+                        </div>
+                        <div class="entry-content">
+                            
+                          <p>This past week, I released a project that I’ve been working on for a while that brought together a major change to the lucking winning games in the world amazing (if I do say so myself).</p>
+
+                          <p>The project allows you to guess numbers rightly based on the level you choose. As an engineering problem, I wanted to focus on 2 things: creating an experience that would be both web and mobile-friendly, and also allowing players to win easily.</p>
+
+                          <p>Oddly enough, I only have little interest in guessing games like this, even though my project is all about guess game. I had decided very early on that I wanted to work build a gaming company, and needed a reason to use it. A few weeks ago I had lunch with a childhood friend of mine to brainstorm project ideas and he described a problem he faces every day: He enjoys playing games but when I think about it, is there a specific reward given to him for successfully completing a level? I learned this about myself– it’s interesting to play games but a lot more interesting when there’s a reward attached to winning. For the entirety of this project, I’ve been working closely with him to make thee project a success working from home!</p>
+
+                          <p>I wanted to share my story around how I came up with this idea, worked to make it happen while still doing my day job, learning, and what the results looked like.</p>
+
+                          <p>For the Frontend, I chose to use <strong>Streamlit</strong> python with combination of <strong>HTML5, CSS3 and JavaScript</strong> without any additional frameworks. I opted not to use other frameworks because I wanted to dedicate my time to solidifying my understanding of python.</p>
+
+                          <p>The website is responsive and compatible with mobile. This means players can access the project from a mobile view as well as desktop!</p>
+
+                          <h5>How To Play</h5>
+                          <ul>
+                            <li>
+                              <p>As the player is granted 10 chances at the easy level, the game will iterate from 1 to 10 to determine if the entered number matches the actual secret number (1 to 24). Since the player has only seven choices in level medium, the game will iterate from 1 to 7 to check if the number matches the secret number.It will iterate from 1 to 5 if the player selects hard level since there are only 5 choices.</p>
+                            </li>
+                            <li>
+                              <p>The game will display that the secret number is smaller than the chosen number if the entered number is smaller than the secret number.</p>
+                            </li>
+                            <li>
+                              <p>Whenever the entered number exceeds the secret number, the game will display that the secret number is greater, which serves as a hint for the player.</p>
+                            </li>
+                            <li>
+                              <p>The game will also display the number of choices left.</p>
+                            </li>
+                            <li>
+                              <p>Once the number entered matches the secret number, the player will be notified that he has won and unlocks the mysterious coin</p>
+                            </li>
+                            <li>The game ends if the player cannot guess the number and he or she has no more choices left. This terminates the game.</li>
+                          </ul>
+                          <br>
+                          <p>I first wrote the program in C then C++. But I don’t know how to make it accessible for people to play and win on web application. So now, I now decided to 
+                            rewrite the game function in python which is the source code I sent to you. It’s working perfectly when I run it on my terminal.</p>
+
+                          <p>Now, I used streamlit to build the Frontend of the web application of the game to make it accessible for people to play directly through the website with 
+                            python. Now, the issue I I had was integrating the game function so that when people click on play now, it triggers the game function and people can play
+                             it directly on the website.</p>
+
+                          <p>Early in the project I had decided to provide a feature for players so that they could play the game and win a prize easily. I set out to research the 
+                            different types of ways to implement this features and what type of prize to give them and as well making sure the game is available for players to easily 
+                            win prize. To implement the prize winning with guess, I realised my project needed to implement blockchain technology by giving the users tokens once they 
+                            have successfully win the guess game.</p>
+
+                          <p>So technically, I knew I will have to use smart contract for the prize to give the players and streamlit to develop the front-end application with python
+                             script for the gaming logic. Then deployed on heroku server. With only 3 days left for my project, I reached out to some of my peers and the technical 
+                             staff to assist me with integration of the gaming logic. I followed this tutorial <a href="https://youtu.be/RjiqbTLW9_E" target="_blank"><u>https://youtu.be/RjiqbTLW9_E</u></a> and ran into an issue with the gaming 
+                             logic integration with the front-end of the website. Here’s an illustration of the image:</p>
+
+
+                          <p>I reached out again to Google blogs and articles for me to be able to fix the issue. I spent several days and time to try solving the issue but all to 
+                            no avail. With only 5 hours before my presentation, I managed to get the Facebook OAuth working and managed to even shower before the presentation!</p>
+
+                          <p>If you, your family, or your friends like Number Guess Game, this is the game for you. I can’t wait to see you try your luck today!</p>
+
+                          <p>Thanks for reading!</p>
+
+                          <p>
+                            If you’ve enjoyed this article, don’t forget to give me a clap and follow me on my social media handles 👇
+                          </p>
+                            <a href="https://web.facebook.com/awoyemiavictor" target="_blank"><strong><u>Facebook</u></strong></a> | 
+                            <a href="https://twitter.com/awoyemivictora" target="_blank"><strong><u>Twitter</u></strong></a> | 
+                            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank"><strong><u>Linkedin</u></strong></a>
+                        </div>
+                    </div>
+                    <!--   Comments Start  -->
+                    <div class="comments mt-5">
+                        <h3>Comments</h3>
+                        <ul class="list-inline comments-list">
+                            <!--  Item 01  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            John Doe
+                                            <p class="text-muted">
+                                                <a href="#">June 24, 2021 at 10:45 am</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li class="list-inline-item">
+                                        <div class="comment-wrap">
+                                            <div class="image-comment">
+                                                <img src="https://via.placeholder.com/125x125" alt="/">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-author">
+                                                    Mary Jane
+                                                    <p class="text-muted">
+                                                        <a href="#">June 25, 2021 at 12:45 am</a>
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.</p>
+                                                <a href="#" class="comment-reply-link">
+                                                    <i class="lni lni-reply"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--  Item 02  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            Jessy Doe
+                                            <p class="text-muted">
+                                                <a href="#">May14, 2021 at 04:55 pm</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Blog Reply-->
+                    <div class="contact-01">
+                        <div class="contact mb-5">
+                            <div class="contact-form">
+                                <h3 class="text-left mb-4">Leave a comment</h3>
+                                <div class="contact-box">
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="name" id="name" type="text" class="form-control" placeholder="First name*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 form-item">
+                                                    <div class="form-group">
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control textarea" placeholder="Your message..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 text-left">
+                                                    <button class="primary-button border-0" id="submit-btn">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    <!--  blog Single End  --> 
+    </main>
+    <!--  Main End  -->
+
+    <!--  Mobile Next and Prev Button Start -->
+    <div class="mobile-blog-nav blog-next-prev-page d-lg-none">
+      <a class="blog-prev-page bg-base-color hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-left mx-auto"></i>
+      </a>
+      <a class="blog-next-page bg-base-color mt-1 mt-lg-3 hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-right mx-auto"></i>
+      </a>
+    </div>
+    <!--  Mobile Next and Prev Button End -->
+
+    <!--  Navbar Button Mobile Start -->
+    <div class="menu-toggle ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--  Navbar Button Mobile End -->
+
+    <!--  Background Shapes Start  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--  Background Shapes End  -->
+
+    <!-- Mouase Magic Cursor Start -->
+    <div class="m-magic-cursor mmc-outer"></div>
+	  <div class="m-magic-cursor mmc-inner"></div>
+    <!-- Mouase Magic Cursor End -->
+
+    <!--  JavaScripts  -->
+    <!--  Jquery 3.4.1  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Malihu ScrollBar Js  -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Swiper Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Map Js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script> -->
+    <!--  Arshia Js  -->
+    <script src="assets/js/arshia.js"></script>
+  </body>
+</html>

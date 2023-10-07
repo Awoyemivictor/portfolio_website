@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="max-width-d">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Different Ways to Declare Functions in JavaScript</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina Group" />
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Malihu Jquery Custom ScrollBar Css -->
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--  Custom Style Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Color Css  -->
+    <link rel="stylesheet" href="assets/colors/colorfull.css">
+  </head>
+  <body class="blog-single-page max-width-d">
+
+    <!-- Preloader -->
+    <div id="line-loader">
+      <div class="middle-line"></div>
+    </div>
+
+    <!--   Menu Overlay Mobile -->
+    <div class="menu-overlay d-none"></div>
+
+  <!--   Right Side Start  -->
+  <div class="right-side d-none d-lg-block">
+    <div id="date"></div>
+    <div class="social-box">
+      <div class="follow-label">
+        <span>Follow Me</span>
+      </div>
+      <div class="social d-none d-lg-block">
+        <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+          <i class="bi bi-facebook t-purple"></i>
+        </a>
+        <a href="https://twitter.com/awoyemivictora" target="_blank">
+          <i class="bi bi-twitter t-red"></i>
+        </a>
+        <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+          <i class="bi bi-instagram t-green"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+          <i class="bi bi-linkedin t-green"></i>
+        </a>
+      </div>
+    </div>
+    <div class="next-prev-page">
+      <button type="button" class="prev-page bg-base-color hstack">
+        <i class="bi bi-chevron-compact-up mx-auto"></i>
+      </button>
+      <button type="button" class="next-page bg-base-color mt-3 hstack">
+        <i class="bi bi-chevron-compact-down mx-auto"></i>
+      </button>
+    </div>
+  </div>
+  <!--  Right Side End  -->
+
+    <!--  Left Side Start  -->
+    <div class="left-side  nav-close">
+      <div class="menu-content-align">
+        <div class="left-side-image">
+          <img src="./assets/img/awoyemi_victor.png" alt="/">
+        </div>
+        <h1 class="mt-1">Awoyemi Victor</h1>
+        <div class="container d-lg-none d-inline-block">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-muted mb-0">Web & Blockchain Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-align">
+        <ul class="list-group menu text-center " id="menu">
+          <li class="list-group-item">
+            <a href="index.html#hero">
+              <i class="bi bi-house"></i>
+              <span>home</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#about" class="custom-btn">
+              <i class="bi bi-person"></i>
+              <span>about</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#resume">
+              <i class="bi bi-clipboard-check"></i>
+              <span>resume</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#portfolio">
+              <i class="bi bi-collection"></i>
+              <span>works</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#blog">
+              <i class="bi bi-book"></i>
+              <span>blog</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="index.html#contact">
+              <i class="bi bi-geo-alt"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a class="download-cv primary-button mt-3 mb-4 d-lg-none" href="https://github.com/awoyemivictor">My Github</a>
+          <div class="social d-lg-none d-block">
+            <a href="https://web.facebook.com/awoyemiavictor" target="_blank">
+              <i class="bi bi-facebook t-purple"></i>
+            </a>
+            <a href="https://twitter.com/awoyemivictora" target="_blank">
+              <i class="bi bi-twitter t-red"></i>
+            </a>
+            <a href="https://www.instagram.com/awoyemivictora/" target="_blank">
+              <i class="bi bi-instagram t-green"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank">
+              <i class="bi bi-linkedin t-green"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Left Side End  -->
+
+    <!--  Main Start  -->
+    <main id="main" class="main-2">
+
+      <!--  blog Single Start  -->
+      <section id="blog-single" class="blog-single section py-6">
+        <div class="container">  
+          <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h2 class="header-title">Different Ways to Declare Functions in JavaScript</h2>
+                <div class="entry-meta">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-calendar-check"></i>
+                                12 April 2023
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-3">
+                            <a href="#">
+                                <i class="bi bi-person-fill"></i>
+                                By Awoyemi Victor
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-4">
+                            <a href="#">
+                                <i class="bi bi-chat-left-text-fill"></i>
+                                24 Comments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="row row-sticky">
+                <div class="col-12 post-content">
+                    <div class="single-post">
+                        <div class="entry-image">
+                            <img src="./assets/img/blog/function_declarations.webp" alt="/">
+                        </div>
+                        <div class="entry-content">
+
+                          <p>In this article, you’ll learn the different ways you can declare functions in JavaScript. One of the coolest thing about JavaScript is that functions can be:</p>
+
+                          <ul class="about-description-box">
+                            <li>
+                              <p>Passed into other functions</p>
+                            </li>
+                            <li>
+                              <p>Stored in variables</p>
+                            </li>
+                            <li>
+                              <p>Moved around like any other piece of data in JavaScript.</p>
+                            </li>
+                          </ul>
+                        
+                          
+                          
+                          <h3>There are 2 ways to declare a function in JavaScript:</h3>
+                          <ul class="about-description-box">
+                            <li>
+                              <p>A. Known Declarations</p>
+                            </li>
+                            <li>
+                              <p>B. Unknown (Anonymous) Declarations</p>
+                            </li>
+                          </ul>
+                          
+
+                          <h4>-- FUNCTION DECLARATIONS</h4> 
+                          <p>These are function declarations that has a name. This is the normal way of declaring a function in JavaScript. For instance:</p>
+
+                          <pre>
+                            <code>
+                              function myCalculator(a, b) {
+                                total = a + b;
+                                return total;
+                              }
+                            </code>
+                          </pre>
+                         
+                          <h5><strong>Some key takeaways:</strong></h5>
+
+                          <ol>
+                            <li>
+                              <p>Function declarations allows for hoisting (which means that JavaScript will take all function keyword and hoist them up, up and up and says “you’re a 
+                                function, you belong at the top of the file”. <br> <br>That means that anywhere you call the function, it’ll be available to you.</p>
+                            </li>
+                            <li>
+                              <p>It allows only for explicit return (having to type the return keyword)</p>
+                            </li>
+                            <li>
+                              <p>There are curly brackets {}</p>
+                            </li>
+                            <li>
+                              <p>There’s a need for parenthesis () even with a single function parameter</p>
+                            </li>
+                          </ol>
+                          
+
+                          <h4>-- UNKNOWN/ANONYMOUS FUNCTION DECLARATIONS</h4>
+                          <p>Anonymous functions are functions without a name. For instance:</p>
+
+                          <pre>
+                            <code>
+                              function(name) {
+                                return `Your name is ${name}`;
+                              }
+                            </code>
+                          </pre>
+
+                          <h5><strong>Some key takeaways:</strong></h5>
+                          <ol>
+                            <li>
+                              <p>It displays error if you try running it directly on the console</p>
+                            </li>
+                            <li>
+                              <p>Anonymous functions are only valid in some use cases like callbacks, IIFE (immediately invoked function expression)</p>
+                            </li>
+                          </ol>
+
+                          <strong>Examples of Anonymous function Declarations:</strong><br><br>
+                          
+                          <h4><strong>METHOD 1</strong> — Variable Function Expressions</h4>
+                          <p>Function expressions are also called Variable expressions. It’s a method of storing a function inside a variable.</p>
+
+                          <pre>
+                            <code>
+                              const myCalculator = function(a, b) { <br>
+                                total = a + b; <br>
+                                return total; <br>
+                              } <br><br>
+                            </code>
+                          </pre>
+                          
+                          <h5><strong>Some key takeaways:</strong></h5>
+
+                          <ol>
+                            <li>
+                              <p>JavaScript does not hoist variable functions</p>
+                            </li>
+                            <li>
+                              <p>Variables functions are anonymous functions (which means they are functions without a name</p>
+                            </li>
+                            <li>
+                              <p>They are Explicitly returned (which means you have to type the return keyword)</p>
+                            </li>
+                            <li>
+                              <p>They make use of curly brackets for statements {}</p>
+                            </li>
+                            <li>
+                              <p>There is always a need for parenthesis () even with a single function parameter.</p>
+                            </li>
+                          </ol>
+                          <br>
+                         
+                          <h4><strong>METHOD 2</strong> — Arrow Function Expressions</h4>
+                         <p>These are function expressions that make use of the fat arrow => for the return statements.</p>
+
+                          <pre>
+                            <code>
+                              const myCalculator = (a, b) => a + b; <br>
+                            </code>
+                          </pre>
+                          
+                          <h5><strong>Some key takeaways:</strong></h5>
+
+                          <ol>
+                            <li>
+                              <p>Arrow function is also an anonymous function</p>
+                            </li>
+                            <li>
+                              <p>They are Implicitly returned (Not having to type the return keyword)</p>
+                            </li>
+                            <li>
+                              <p>They don’t make use of curly brackets for statements</p>
+                            </li>
+                            <li>
+                              <p> There’s no need of parenthesis () around a single function parameter</p>
+                            </li>
+                          </ol>
+                          <br>
+
+                          <h4><strong>METHOD 3</strong> — IFFY Function Expressions (immediately invoked function expression)</h4>
+
+                            <pre>
+                              <code>
+                                (function(a, b) { <br>
+                                  total = a + b; <br>
+                                  return total; <br>
+                                })(); <br>
+                              </code>
+                            </pre>
+                                
+                          <h5><strong>Some key takeaways:</strong></h5>
+
+                          <br>
+
+                          <ol>
+                            <li>
+                              <p>Function will be wrapped by parenthesis (parenthesis always run first in JavaScript)</p>
+                            </li>
+                            <li>
+                              <p>It returns the value which you can immediately run by putting parenthesis on the end</p>
+                            </li>
+                            <li>
+                              <p>It can as well takes in parameters</p>
+                            </li>
+                          </ol>
+                          
+                          <br>
+
+                          <h4><strong>METHOD 4 </strong>— Method Function Expressions</h4>
+                          <p>Method is simply a function that lives inside of an object.</p>
+
+                          <pre>
+                            <code>
+                              const calNum = { <br>
+                                name: "victor", <br>
+                                myAdd: function(a, b) { <br>
+                                  total = a + b; <br>
+                                  console.log(`${this.name.toUpperCase()}, Your result is ${total}`); <br>
+                                }, <br>
+                                // Short hand Method <br>
+                                mySub(a, b) { <br>
+                                  total = a - b; <br>
+                                  console.log(`${this.victor.toUpperCase()}, Your result is ${total}`); <br>
+                                }, <br>
+                                // Arrow function <br>
+                                myDiv: (a, b) => { <br>
+                                  total = Math.floor(a / b); <br>
+                                  // this.name won't work here because they take the parent scope of *this* <br>
+                                  console.log(`Your result is ${total}`); <br>
+                                }, <br>
+                              };
+                            </code>
+                          </pre>
+                          <img src="./assets/img/blog/function_expression.webp" alt="">
+
+                          <br><br><br>
+                          <h4><strong>METHOD 5</strong> — Callback Function Expressions</h4>
+                          <p>This is a function that is passed as an argument to another function.</p>
+
+                          <h5><strong>Some key take aways:</strong></h5>
+
+                          <pre>
+                            <code>
+                              Callback function run after another function has finished <br>
+                              Types: Click callback & Timer callback <br>
+                              // Click callback <br>
+                              const press = document.querySelector(".clickMe"); <br>
+                              press.addEventListener("click", <br>
+                                function() { <br>
+                                  console.log("Nice Job!"); <br>
+                                });<br>
+                                
+                              // Timer callback<br>
+                              setTimeout(function() { <br>
+                                console.log("IT'S TIME TO EAT YOUR BREAKFAST!")}, 2000);
+                            </code>
+                          </pre>
+                          <img src="./assets/img/blog/callback_function.webp" alt="">
+                          
+                          <br><br><br>
+                          <p>
+                            If you’ve enjoyed this article, don’t forget to give me a clap and follow me on my social media handles 👇
+                          </p>
+                            <a href="https://web.facebook.com/awoyemiavictor" target="_blank"><strong><u>Facebook</u></strong></a> | 
+                            <a href="https://twitter.com/awoyemivictora" target="_blank"><strong><u>Twitter</u></strong></a> | 
+                            <a href="https://www.linkedin.com/in/victor-awoyemi-910786152/" target="_blank"><strong><u>Linkedin</u></strong></a>
+                        </div>
+                    </div>
+                    <!--   Comments Start  -->
+                    <div class="comments mt-5">
+                        <h3>Comments</h3>
+                        <ul class="list-inline comments-list">
+                            <!--  Item 01  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            John Doe
+                                            <p class="text-muted">
+                                                <a href="#">June 24, 2021 at 10:45 am</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li class="list-inline-item">
+                                        <div class="comment-wrap">
+                                            <div class="image-comment">
+                                                <img src="https://via.placeholder.com/125x125" alt="/">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-author">
+                                                    Mary Jane
+                                                    <p class="text-muted">
+                                                        <a href="#">June 25, 2021 at 12:45 am</a>
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.</p>
+                                                <a href="#" class="comment-reply-link">
+                                                    <i class="lni lni-reply"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--  Item 02  -->
+                            <li class="list-inline-item">
+                                <div class="comment-wrap">
+                                    <div class="image-comment">
+                                        <img src="https://via.placeholder.com/125x125" alt="/">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-author">
+                                            Jessy Doe
+                                            <p class="text-muted">
+                                                <a href="#">May14, 2021 at 04:55 pm</a>
+                                            </p>
+                                        </div>
+                                        <p class="mb-0">In a professional context it often happens that private or corporate clients corder a publication to be made.In a professional context it often happens that private.</p>
+                                        <a href="#" class="comment-reply-link">
+                                            <i class="lni lni-reply"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Blog Reply-->
+                    <div class="contact-01">
+                        <div class="contact mb-5">
+                            <div class="contact-form">
+                                <h3 class="text-left mb-4">Leave a comment</h3>
+                                <div class="contact-box">
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="name" id="name" type="text" class="form-control" placeholder="First name*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 form-item">
+                                                    <div class="form-group">
+                                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email*" required >
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 form-item">
+                                                    <div class="form-group">
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control textarea" placeholder="Your message..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 text-left">
+                                                    <button class="primary-button border-0" id="submit-btn">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    <!--  blog Single End  --> 
+    </main>
+    <!--  Main End  -->
+
+    <!--  Mobile Next and Prev Button Start -->
+    <div class="mobile-blog-nav blog-next-prev-page d-lg-none">
+      <a class="blog-prev-page bg-base-color hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-left mx-auto"></i>
+      </a>
+      <a class="blog-next-page bg-base-color mt-1 mt-lg-3 hstack" href="index.html#hero">
+        <i class="bi bi-chevron-compact-right mx-auto"></i>
+      </a>
+    </div>
+    <!--  Mobile Next and Prev Button End -->
+
+    <!--  Navbar Button Mobile Start -->
+    <div class="menu-toggle ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--  Navbar Button Mobile End -->
+
+    <!--  Background Shapes Start  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--  Background Shapes End  -->
+
+    <!-- Mouase Magic Cursor Start -->
+    <div class="m-magic-cursor mmc-outer"></div>
+	  <div class="m-magic-cursor mmc-inner"></div>
+    <!-- Mouase Magic Cursor End -->
+
+    <!--  JavaScripts  -->
+    <!--  Jquery 3.4.1  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Malihu ScrollBar Js  -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Swiper Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Map Js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script> -->
+    <!--  Arshia Js  -->
+    <script src="assets/js/arshia.js"></script>
+  </body>
+</html>
