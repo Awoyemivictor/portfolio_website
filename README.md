@@ -47,3 +47,16 @@
 
                           
                         </div>
+
+
+
+// Porfolio icons
+bi bi-camera-video
+bi bi-file-earmark-text
+bi bi-music-note-beamed
+
+// Loading type
+-- Popup: class="portfolio-magnific mfp-iframe
+-- Loading: class="ajax-page-load"
+
+
